@@ -29,21 +29,26 @@ public class Main {
         {
             if (isTie(i, 1)) tempScore = PuntosJugador1;
             else { score +="-"; tempScore = PuntosJugador2;}
-            switch(tempScore)
-            {
-                case 0:
-                    score +="Love";
-                    break;
-                case 1:
-                    score +="Fifteen";
-                    break;
-                case 2:
-                    score +="Thirty";
-                    break;
-                case 3:
-                    score +="Forty";
-                    break;
-            }
+            score = getValorDePuntos(score, tempScore);
+        }
+        return score;
+    }
+
+    private static String getValorDePuntos(String score, int tempScore) {
+        switch(tempScore)
+        {
+            case 0:
+                score +="Love";
+                break;
+            case 1:
+                score +="Fifteen";
+                break;
+            case 2:
+                score +="Thirty";
+                break;
+            case 3:
+                score +="Forty";
+                break;
         }
         return score;
     }
