@@ -55,4 +55,25 @@ public class Model {
     public int getVelocidad(String matricula) {
         return getCoche(matricula).velocidad;
     }
+    public int aumentarVelocidad(String matricula,int aumento){
+        // busca el coche
+        Coche aux = getCoche(matricula);
+        // aumenta la velocidad
+        aux.velocidad += aumento;
+        // retorna la nueva velocidad
+        return aux.velocidad;
+    }
+    public int reducirVelocidad(String matricula,int decremento){
+        // busca el coche
+        Coche aux = getCoche(matricula);
+        // reduce la velocidad
+        aux.velocidad -= decremento;
+        // si la velocidad es menor que 0, se pone a -1
+        if (aux.velocidad < 0) {
+            aux.velocidad = -1;
+        }
+        // retorna la nueva velocidad
+        return aux.velocidad;
+    }
+
 }
