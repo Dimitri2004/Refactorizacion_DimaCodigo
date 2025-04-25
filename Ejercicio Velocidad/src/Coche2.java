@@ -10,5 +10,6 @@ public class Coche2 {
         this.modelo = modelo;
         this.matricula = matricula;
         this.velocidad = 0;
+
     }
 }
